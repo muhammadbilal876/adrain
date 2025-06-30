@@ -8,7 +8,11 @@ require('dotenv').config();
 const app = express();
 const PORT = 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://shopping-cart-4.web.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 app.use(express.json());
 
 const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL;
