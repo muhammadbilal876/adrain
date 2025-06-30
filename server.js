@@ -9,7 +9,7 @@ const app = express();
 const PORT = 5000;
 
 app.use(cors({
-  origin: 'https://shopping-cart-4.web.app',
+  origin: 'https://adrain-driver-app.web.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
